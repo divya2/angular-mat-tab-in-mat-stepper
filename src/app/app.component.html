@@ -1,0 +1,30 @@
+<mat-vertical-stepper (selectionChange)="cambiaStep($event)" [linear]="true">
+  <mat-step>
+    <ng-template matStepLabel>Single tab</ng-template>
+    <ng-container>
+    <stepper-component></stepper-component>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+    </ng-container>
+  </mat-step>
+  <mat-step >
+    <form>
+      <ng-template matStepLabel>Multiple tabs</ng-template>
+      <ng-container>
+        <stepper-component [stepper]="stepper1"></stepper-component>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </ng-container>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <ng-container>
+      You are now done.
+    </ng-container>
+  </mat-step>
+  
+</mat-vertical-stepper>
